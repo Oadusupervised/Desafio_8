@@ -1,0 +1,98 @@
+[
+    {
+      "title": "ProductA",
+      "description": "This is a product.",
+      "code": "AC123",
+      "price": 9.99,
+      "stock": 1,
+      "category": "Electronics",
+      "thumbnails": [
+        "https://example23.com/image1.jpg",
+        "https://example32.com/image2.jpg"
+      ],
+      "id": "0000",
+      "status": "active"
+    },
+    {
+      "title": "Wireless Bluetooth Headphones",
+      "description": "Experience high-quality sound with these wireless Bluetooth headphones.",
+      "code": "WHP456",
+      "price": 39.99,
+      "stock": 5,
+      "category": "Electronics",
+      "thumbnails": [
+        "https://example.com/wireless_headphones_1.jpg",
+        "https://example.com/wireless_headphones_2.jpg"
+      ],
+      "id": "0002",
+      "status": "active"
+    },
+    {
+      "title": "Fitness Tracker Watch",
+      "description": "Monitor your fitness and track your progress with this fitness tracker watch.",
+      "code": "FTW789",
+      "price": 49.99,
+      "stock": 8,
+      "category": "Electronics",
+      "thumbnails": [
+        "https://example.com/fitness_tracker_1.jpg",
+        "https://example.com/fitness_tracker_2.jpg"
+      ],
+      "id": "0003",
+      "status": "active"
+    },
+    {
+      "title": "Portable Bluetooth Speaker",
+      "description": "Take your music anywhere with this portable Bluetooth speaker.",
+      "code": "PBS321",
+      "price": 29.99,
+      "stock": 15,
+      "category": "Electronics",
+      "thumbnails": [
+        "https://example.com/portable_speaker_1.jpg",
+        "https://example.com/portable_speaker_2.jpg"
+      ],
+      "id": "0004",
+      "status": "active"
+    },
+    {
+      "title": "Wireless Mouse",
+      "description": "Navigate your computer with ease using this wireless mouse.",
+      "code": "WM456",
+      "price": 14.99,
+      "stock": 12,
+      "category": "Electronics",
+      "thumbnails": [
+        "https://example.com/wireless_mouse_1.jpg",
+        "https://example.com/wireless_mouse_2.jpg"
+      ],
+      "id": "0005",
+      "status": "active"
+    },
+    {
+      "title": "LED Desk Lamp",
+      "description": "Illuminate your workspace with this LED desk lamp.",
+      "code": "LDP789",
+      "price": 24.99,
+      "stock": 7,
+      "category": "Electronics",
+      "thumbnails": [
+        "https://example.com/led_desk_lamp_1.jpg",
+        "https://example.com/led_desk_lamp_2.jpg"
+      ],
+      "id": "0006",
+      "status": "active"
+    },
+    {
+      "title": "Smartphone Tripod",
+      "description": "Capture stable photos and videos with this smartphone tripod.",
+      "code": "STP321",
+      "price": 12.99,
+      "stock": 9,
+      "category": "Electronics",
+      "thumbnails": [
+        "https://example.com/smartphone_tripod_1.jpg"],
+        "id":"0007",
+        "status":"active"
+      }
+]  

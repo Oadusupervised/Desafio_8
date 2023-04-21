@@ -1,0 +1,62 @@
+<h1>realTimeProducts</h1>
+<form id="cargaProducts">
+  <label for="id">id</label><input id="inputId" name="id" type="text"><br />
+  <label for="title">title</label><input id="inputTitle" name="title" type="text"><br />
+  <label for="description">description</label><input id="inputDescription" name="description" type="text"><br />
+  <label for="code">code</label><input id="inputCode" name="code" type="text"><br />
+  <label for="price">price</label><input id="inputPrice" name="price" type="number"><br />
+  <label for="stock">stock</label><input id="inputStock" name="stock" type="number"><br />
+  <label for="category">category</label><input id="inputCategory" name="category" type="text"><br />
+  <label for="status">status</label><input id="inputStatus" name="status" type="text"><br />
+  <label for="thumbnails">thumbnails</label><input id="inputThumbnails" name="thumbnails" type="text"><br />
+    <button type="submit" id="btnEnviar">enviar</button>
+</form>
+
+<h3>productosActuales</h3>
+<div id="listadoProductos">
+    {{#if hayProductos}}
+    <ul>
+        {{#each productos}}
+        <div class="col-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">{{this.title}}</h5>
+              <p class="card-text">{{this.description}}</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Item {{this.code}}</li>
+              <li class="list-group-item">Price: ${{this.price}}</li>
+              <li class="list-group-item">Category: {{this.category}}</li>
+              <li class="list-group-item">Stock: {{this.stock}}</li>
+              <li class="list-group-item"></li>
+            </ul>
+          </div>
+        </div>
+        {{/each}}
+    </ul>
+    {{else}}
+    <p>no hay productos para mostrar</p>
+    {{/if}}
+</div>
+
+<a {{#if hasPrevPage}} href="/realTimeProducts/?limit={{limit}}&page={{prevPage}}" {{/if}}>Prev</a>
+[{{ page }}]
+<a {{#if hasNextPage}} href="/realTimeProducts/?limit={{limit}}&page={{nextPage}}" {{/if}}>Next</a><br>
+Página: <input type="text"> <button onclick="irAPag({{limit}})">ir</button>
+
+
+<script>
+  function irAPag(limit) {
+    const pagDeseada = document.querySelector('input').value || 1
+    window.location = `/?limit=${limit}&page=${pagDeseada}`
+  }
+</script>
+
+
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"
+    integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="../public/js/cargaProductos.js"></script>
+

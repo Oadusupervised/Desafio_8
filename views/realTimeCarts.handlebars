@@ -1,0 +1,24 @@
+<pre>//{{json this}}</pre>
+
+{{#if hayDocs}}
+<ul>
+  {{#each docs}}
+  <li>id: {{this.id}}| nombreProducts:{{this.nombreProducts}}</li>
+  {{/each}}
+</ul>
+{{else}}
+array vacio...
+{{/if}}
+
+
+
+<a {{#if hasPrevPage}} href="/realTimeCarts/?limit={{limit}}&page={{prevPage}}" {{/if}}>Prev</a>
+[{{ page }}]
+<a {{#if hasNextPage}} href="/realTimeCarts/?limit={{limit}}&page={{nextPage}}" {{/if}}>Next</a><br>
+Página: <input type="text"> <button onclick="irAPag({{limit}})">ir</button>
+<script>
+  function irAPag(limit) {
+    const pagDeseada = document.querySelector('input').value || 1
+    window.location = `/?limit=${limit}&page=${pagDeseada}`
+  }
+</script>
